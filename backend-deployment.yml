@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    project: hackmaze
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: fast-backend
+  strategy:
+    type: Recreate 
+  template:
+    metadata:
+      labels:
+        app: fast-backend
+        role: backend-role
+    spec:
+      containers:
+        - name: backend-container
+          image: mostafaewida/hackmaze_backend
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: backend-config
+            - configMapRef:
+                name: postgres-config # populate db-specific values (needed to keep one source of truth)
+            - secretRef:
+                name: postgres-secret # populate db-specific secrets (needed to keep one source of truth)
+          resources:
+            limits:
+              cpu: 0.5
+            requests:
+              cpu: 0.25 # gives 1/2 of the limit

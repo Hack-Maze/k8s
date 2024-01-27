@@ -1,0 +1,29 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: postgres-network-policy
+  labels:
+    project: hackmaze
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            role: backend-role
+      ports:
+        - protocol: TCP
+          port: 5432
+  egress:
+    - to:
+      - podSelector:
+          matchLabels:
+            role: backend-role
+      ports:
+        - protocol: TCP
+          port: 5432
