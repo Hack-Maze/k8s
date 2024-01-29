@@ -5,6 +5,7 @@ metadata:
   labels:
     project: hackmaze
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: postgres
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:16 
+          image: postgres:12
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 5432 # Exposing the container port 5432 for PostgreSQL client connections.
