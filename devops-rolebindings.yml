@@ -6,9 +6,7 @@ metadata:
   labels:
     project: hackmaze
 subjects:
-- kind: User
-  name: hackmaze_devops
-  apiGroup: rbac.authorization.k8s.io
+
 roleRef:
   kind: Role
   name: devops-role
