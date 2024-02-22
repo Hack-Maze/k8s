@@ -6,6 +6,6 @@ metadata:
   labels:
     project: hackmaze
 rules:
-- apiGroups: [""] # "" indicates the core API group
-  resources: ["ingress", "deployments", "cert-managers", "replicaset", "secrets"]
-  verbs: ["get", "watch", "list", "update", "create", "patch", "delete"]
+- apiGroups: ["*"] # "*" indicates all API groups
+  resources: ["*"] # "*" indicates all resources
+  verbs: ["*"] # "*" indicates all verbs
