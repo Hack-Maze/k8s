@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/component: grafana
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 10.3.3
+  name: grafana-config
+  namespace: monitoring
+stringData:
+  grafana.ini: |
+    [date_formats]
+    default_timezone = UTC
+    [paths]
+    data= /var/lib/grafana/
+    logs= /var/log/grafana
+    plugins= /var/lib/grafana/plugins
+    provisioning= /etc/grafana/provisioning
+    [analytics]
+    check_for_updates= true
+    [log]
+    mode= console
+    [grafana_net]
+    url= https=//grafana.net
+    [server]
+    domain= "hm-1337.eastus.cloudapp.azure.com"
+    root_url= http=//hm-1337.eastus.cloudapp.azure.com/monitoring
+type: Opaque

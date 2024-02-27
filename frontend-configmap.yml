@@ -6,4 +6,4 @@ metadata:
     project: hackmaze
     app: react-frontend
 data:
-  REACT_APP_BACKEND_BASE_URI: backend.com/api/
+  BACKEND_HOST: backend-service

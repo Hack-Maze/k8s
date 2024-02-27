@@ -26,6 +26,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: backend-config
+            - secretRef:
+                name: backend-secret
             - configMapRef:
                 name: postgres-config # populate db-specific values (needed to keep one source of truth)
             - secretRef:
@@ -34,4 +36,4 @@ spec:
             limits:
               cpu: 0.5
             requests:
-              cpu: 0.25 # gives 1/2 of the limit
+              cpu: 0.25 # gives 1/2 of the limit 
