@@ -27,6 +27,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: frontend-config
+            - secretRef:
+                name: frontend-secret
           resources:
             limits:
               cpu: 0.5
