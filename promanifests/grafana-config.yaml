@@ -25,5 +25,5 @@ stringData:
     url= https=//grafana.net
     [server]
     domain= "hm-1337.eastus.cloudapp.azure.com"
-    root_url= http=//hm-1337.eastus.cloudapp.azure.com/monitoring
+    root_url= http://hm-1337.eastus.cloudapp.azure.com/monitoring
 type: Opaque
