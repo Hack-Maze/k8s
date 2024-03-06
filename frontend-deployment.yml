@@ -29,6 +29,8 @@ spec:
                 name: frontend-config
             - secretRef:
                 name: frontend-secret
+            - secretRef:
+                name: backend-secret #to get the FIRST_SUPERUSER and FIRST_SUPERUSER_PASSWORD
           resources:
             limits:
               cpu: 0.5
