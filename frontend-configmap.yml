@@ -7,3 +7,4 @@ metadata:
     app: react-frontend
 data:
   BACKEND_HOST: backend-service
+  BACKEND_PORT: 3001
