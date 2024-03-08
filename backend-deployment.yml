@@ -32,6 +32,8 @@ spec:
                 name: postgres-config # populate db-specific values (needed to keep one source of truth)
             - secretRef:
                 name: postgres-secret # populate db-specific secrets (needed to keep one source of truth)
+            - secretRef:
+                name: admincreds-secret #to get the FIRST_SUPERUSER and FIRST_SUPERUSER_PASSWORD (needed to keep one source of truth)
           resources:
             limits:
               cpu: 0.5

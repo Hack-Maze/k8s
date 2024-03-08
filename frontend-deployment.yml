@@ -30,7 +30,7 @@ spec:
             - secretRef:
                 name: frontend-secret
             - secretRef:
-                name: backend-secret #to get the FIRST_SUPERUSER and FIRST_SUPERUSER_PASSWORD
+                name: admincreds-secret #to get the FIRST_SUPERUSER and FIRST_SUPERUSER_PASSWORD (needed to keep one source of truth)
           resources:
             limits:
               cpu: 0.5
