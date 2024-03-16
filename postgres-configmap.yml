@@ -9,3 +9,4 @@ data:
   POSTGRES_DB: hackmaze
   PGDATA: /var/lib/postgresql/data/pgdata
   POSTGRES_SERVER: postgres-service
+  POSTGRES_PORT: "5432"
