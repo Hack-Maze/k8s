@@ -9,6 +9,6 @@ data:
   PROJECT_NAME: "HacMaze"
   # SERVER_HOST: http://hackmaze.0rg.us
   DOMAIN: "hm-1337.eastus.cloudapp.azure.com"
-  USERS_OPEN_REGISTRATION: True
+  USERS_OPEN_REGISTRATION: "True"
   PROJECT_NAME: "HackMaze Project"
   STACK_NAME: "hack-maze-project"
