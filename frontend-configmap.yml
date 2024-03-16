@@ -6,4 +6,5 @@ metadata:
     project: hackmaze
     app: react-frontend
 data:
-  VITE_API_URL: "http://hm-1337.eastus.cloudapp.azure.com/services/"
+    config.js: |
+      window.VITE_API_URL='http://hm-1337.eastus.cloudapp.azure.com/services/'
