@@ -16,6 +16,7 @@ spec:
     - hm-1337.eastus.cloudapp.azure.com
     secretName: hackmaze-tls
   rules:
+    #- host: hackmaze.0rg.us
     - http:
         paths:
           - path: /?(.*)

@@ -5,7 +5,7 @@ metadata:
   labels:
     project: hackmaze
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: react-frontend
