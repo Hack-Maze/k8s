@@ -6,8 +6,3 @@ metadata:
     app: fast-backend
     project: hackmaze
 data:
-  DOMAIN: "hm-1337.eastus.cloudapp.azure.com"
-  USERS_OPEN_REGISTRATION: "True"
-  PROJECT_NAME: "HackMaze Project"
-  STACK_NAME: "hack-maze-project"
-  BACKEND_CORS_ORIGINS: "https://hackmaze.0rg.us,https://hm-1337.eastus.cloudapp.azure.com"

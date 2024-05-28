@@ -11,4 +11,4 @@ spec:
   ports:
   - port: 3001
     name: http
-    targetPort: 80
+    targetPort: 4444
